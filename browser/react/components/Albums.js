@@ -4,14 +4,15 @@ import { Link } from 'react-router';
 const Albums = (props) => {
 
   const albums = props.albums;
-  console.log(props);
+  // console.log(props);
+  console.log('albums: ', albums);
 
   return (
     <div>
       <h3>Albums</h3>
       <div className="row">
       {
-        albums.map(album => (
+          albums.map(album => (
           <div className="col-xs-4" key={ album.id }>
             <Link className="thumbnail" to={`/albums/${album.id}`}>
               <img src={ album.imageUrl } />
