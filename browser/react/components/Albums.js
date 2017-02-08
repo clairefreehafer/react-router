@@ -3,9 +3,8 @@ import { Link } from 'react-router';
 
 const Albums = (props) => {
 
-  const albums = props.albums;
-  // console.log(props);
-  console.log('albums: ', albums);
+  const albums = props.albums || [];
+  console.log(props);
 
   return (
     <div>

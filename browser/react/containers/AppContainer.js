@@ -37,7 +37,6 @@ export default class AppContainer extends Component {
       .then(res => res.data)
       .then(artists => this.setState({ artists: artists }));
 
-    // selectArtist();
 
     AUDIO.addEventListener('ended', () =>
       this.next());
@@ -113,7 +112,9 @@ export default class AppContainer extends Component {
 				.then(artist => this.setState({
 					artist: artist
 				}));
-		}
+  }
+
+
 
   // deselectAlbum () {
   //   this.setState({ selectedAlbum: {}});
@@ -140,8 +141,9 @@ export default class AppContainer extends Component {
               // note that this.selectAlbum is a method, and this.state.selectedAlbum is the chosen album
               artists: this.state.artists,
               artist: this.state.artist,
-              selectArtist: this.selectArtist
-
+              selectArtist: this.selectArtist,
+              selectArtistAlbums: this.state.selectArtistAlbums,
+              selectArtistSongs: this.state.selectArtistSongs
             })
             : null
         }

@@ -23,7 +23,6 @@ const Songs = (props) => {
             <tr key={song.id}>
               <td>
                 <button className="btn btn-default btn-xs" onClick={() => toggle(song, songs)}>
-                  <span className={song.id === currentSong.id && isPlaying ? "glyphicon glyphicon-pause" : "glyphicon glyphicon-play"}></span>
                 </button>
               </td>
               <td>{ song.name }</td>
@@ -40,3 +39,6 @@ const Songs = (props) => {
 }
 
 export default Songs;
+
+
+// <span className={song.id === currentSong.id && isPlaying ? "glyphicon glyphicon-pause" : "glyphicon glyphicon-play"}></span>
